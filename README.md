@@ -2,6 +2,8 @@
 
 This repo is my daily Neovim setup built on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim), with extra plugins and quality-of-life tooling layered on top.
 
+> Original work by [@christitustech](https://github.com/christitustech) — this fork adds macOS support and other tweaks.
+
 ### Current Issues to Fix
 
 - Give prompt to disable wakatime plugin as most don't use this
@@ -32,6 +34,17 @@ bash lin-depend.sh
 What it handles:
 - Installs core CLI deps (ripgrep, fd, fzf, neovim, shellcheck, node/npm, make, etc.)
 - Installs clipboard dependency based on session type (Wayland or X11)
+- Ensures `markdownlint-cli2` is available for markdown linting
+- Ensures your `~/.config/nvim` symlink points to `titus-kickstart`
+
+### macOS
+
+```bash
+bash setup.sh
+```
+
+What it handles:
+- Installs core CLI deps via Homebrew (ripgrep, fd, fzf, neovim, shellcheck, node/npm, make, etc.)
 - Ensures `markdownlint-cli2` is available for markdown linting
 - Ensures your `~/.config/nvim` symlink points to `titus-kickstart`
 
